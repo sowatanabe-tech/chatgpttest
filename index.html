@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>プロフィール | あなたの名前</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content container">
+      <p class="hero__eyebrow">Portfolio</p>
+      <h1 class="hero__title">あなたの名前</h1>
+      <p class="hero__subtitle">フロントエンドエンジニア / デザイナー / ライター</p>
+      <div class="hero__actions">
+        <a class="button" href="#contact">お問い合わせ</a>
+        <a class="button button--ghost" href="#projects">制作事例を見る</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title">自己紹介</h2>
+        <p>
+          Webアプリケーションの開発とユーザー体験の改善を得意とするクリエイターです。ReactやVueを活用したインタラクティブなUI設計、デザインシステムの構築、コンテンツライティングまで幅広く対応します。人々の課題を解決するプロダクトを生み出すことを使命としています。
+        </p>
+        <dl class="profile">
+          <div class="profile__item">
+            <dt>所在地</dt>
+            <dd>東京都</dd>
+          </div>
+          <div class="profile__item">
+            <dt>経験年数</dt>
+            <dd>5年</dd>
+          </div>
+          <div class="profile__item">
+            <dt>好きなもの</dt>
+            <dd>UIデザイン、コーヒー、旅行</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="skills" class="section section--muted">
+      <div class="container">
+        <h2 class="section__title">スキル</h2>
+        <ul class="grid grid--three">
+          <li class="card">
+            <h3 class="card__title">フロントエンド</h3>
+            <p class="card__text">React / Next.js / TypeScript / Tailwind CSS / Cypress</p>
+          </li>
+          <li class="card">
+            <h3 class="card__title">デザイン</h3>
+            <p class="card__text">UIデザイン、Figma、デザインシステム、プロトタイピング</p>
+          </li>
+          <li class="card">
+            <h3 class="card__title">ライティング</h3>
+            <p class="card__text">テクニカルブログ、UXケーススタディ、プレゼン資料作成</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section__title">制作事例</h2>
+        <div class="grid grid--two">
+          <article class="project">
+            <div class="project__body">
+              <h3 class="project__title">プロダクトA</h3>
+              <p class="project__description">
+                SaaSダッシュボードのUIリニューアルを担当。情報設計とビジュアルデザインを見直し、主要KPIの可視化と操作性を向上させました。
+              </p>
+            </div>
+            <a class="project__link" href="https://example.com" target="_blank" rel="noreferrer">詳しく見る</a>
+          </article>
+          <article class="project">
+            <div class="project__body">
+              <h3 class="project__title">プロダクトB</h3>
+              <p class="project__description">
+                マルチプラットフォーム向けのコンテンツ配信アプリをリードエンジニアとして開発。リアルタイム通知や動画ストリーミングの最適化を実現しました。
+              </p>
+            </div>
+            <a class="project__link" href="https://example.com" target="_blank" rel="noreferrer">詳しく見る</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--muted">
+      <div class="container">
+        <h2 class="section__title">お問い合わせ</h2>
+        <p class="section__intro">案件のご相談やコラボレーションのご依頼は、お気軽にご連絡ください。</p>
+        <div class="contact">
+          <a class="contact__item" href="mailto:hello@example.com">
+            <span class="contact__label">メール</span>
+            <span class="contact__value">hello@example.com</span>
+          </a>
+          <a class="contact__item" href="https://github.com/username" target="_blank" rel="noreferrer">
+            <span class="contact__label">GitHub</span>
+            <span class="contact__value">github.com/username</span>
+          </a>
+          <a class="contact__item" href="https://note.com/username" target="_blank" rel="noreferrer">
+            <span class="contact__label">Blog</span>
+            <span class="contact__value">note.com/username</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> あなたの名前</small>
+    </div>
+  </footer>
+
+  <script>
+    const yearElement = document.getElementById("year");
+    yearElement.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
