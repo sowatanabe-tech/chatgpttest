@@ -26,3 +26,21 @@ python -m http.server
 2. **Build and deployment** の **Source** で「Deploy from a branch」を選択します。
 3. **Branch** に `main`（または公開したいブランチ）と `/ (root)` を指定して **Save** します。
 4. 数分後に表示される公開 URL へアクセスすると、GitHub 上でも完成したプロフィールサイトを確認できます。
+
+## GitHub へ反映する手順
+
+リポジトリを手元で編集した後、次のコマンドで変更を GitHub に反映できます。
+
+```bash
+# 最新の変更を取り込む
+git pull
+
+# 変更したファイルをステージしてコミット
+git add index.html README.md
+git commit -m "Update profile content"
+
+# GitHub へプッシュ
+git push
+```
+
+GitHub Actions や GitHub Pages を利用している場合は、プッシュ後に自動でサイトが公開されます。
